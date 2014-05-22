@@ -314,9 +314,9 @@ deviceToJson(Device *device)
       return NULL;
     }
   }
-  if(device->productId != NULL) 
+  if(device->location != NULL) 
   {
-    if( ( ( value = json_string( device->productId ) ) == NULL ) || ( json_object_set_new(deviceJson, "productId", value) != 0 ) )
+    if( ( ( value = json_string( device->productId ) ) == NULL ) || ( json_object_set_new(deviceJson, "location", value) != 0 ) )
     {
       return NULL;
     }
